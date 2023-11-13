@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Title</title>
+	<title>Screen Reader Tutorial</title>
 	<link rel="stylesheet" href="styles/styles.css">
 	<script defer src="script/nav.js"></script>
 
@@ -16,12 +16,51 @@
 		<!-- nav in script/nav.js -->
 	</nav>
 	
-	<div class="container pt-5">
-		<h1>Screen Reader Tutorial</h1>
-		<p>Welcome messsage and brief description of website purpose.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-	</div>
-
+	<main class="container pt-5">
+		<div style="text-align:center;">
+		   <h1><b>Screen Reader Tutorial: Designing with Screen Readers</b></h1>
+		   <h5>Welcome! The following tutorial aims to educate you in the correct way to design with Screen Reader usability in mind.</h5>
+		</div>
+		<br>
+		<h2>What is a Screen Reader?</h2>
+		<p>Screen readers are software that enables those who cannot easily see the screen to access information on computers and smartphones. The technology either reads the screen aloud through the use of text-to-speech (commonly abbreviated to TTS) or converts it to Braille.</p>
+		
+		<h2>What can screen readers do?</h2>
+		<p>Screen readers convert the information given on a website into information that can be used by people who can't see the screen properly. Screen readers convert into the two following formats:</p>
+		<ul>
+  			<li>Text-to-Speech</li>
+  			<li>Braille (only if the user posesses a Braille tactile reading pad)</li>
+		</ul> 
+		<p>Not only can screen readers read the user's screen, but can also be tailored to the user’s actions with automation through a process called scripting. Scripting is the ability to write programs that automate tasks for ease of use and better accessibility. These scripts can be customized by the user, or obtained from other users, as scripts can be shared. There are many active communities that revolve around sharing scripts with others in order to help everyone get the most use out of their screen reader.</p>
+		<p>Screen readers typically support multiple languages, so they can switch to a different language as long as that language is encoded within the site’s metadata.</p>
+		<p>Reading text isn't the only thing screen readers can do: they can also describe pictures and tables so that the user can understand the context of those elements on the page as well. However, webpages need to be designed properly with the correct tags and ARIA used in order for screen readers to function correctly.</p>
+		
+		<h2>What do Screen Readers Need to Work Properly?</h2>
+		<p>Screen readers read the HTML files of websites directly in order to interpret the content to be given to the user. Here are some of the ways you can design your website to be more accessible for screen readers.</p>
+		<p>Screen readers use the tags in the HTML code in order to understand the content and sections of the page. So, in order to be sure that screen readers can understand the various elements within your webpage, you need to be sure to use semantically rich tags.</p>
+		<p>Semantically rich tags are tags that self-explanatory, meaning that the name of the tag itself is enough to understand what it is. For example, &ltimg&gt is an image, &ltp&gt is a paragraph, and &lttable&gt is a table, they all have names that explain their purpose. Tags like &ltspan&gt and &ltdiv&gt aren't semantically rich, it isn't clear what the content contained in these tags are. You can use ARIA to inform screen readers of their context, and we'll cover ARIA later in the tutorial.</p>
+		<p>There are many other reasons as to why it is important to use proper tags. Screen readers are able to jump between tags of the same type quickly to allow for easier navigation. For example, when a screen reader reaches a &lth2&gt heading, it'll allow the user to jump between every &lth2&gt heading on the page.</p>
+		<p>Certain HTML tags activate specific features of screen readers. For example, screen readers will change its controls to allow the user to navigate a table when it detects the &lttable&gt tag. Because of this, it's important to always use the correct tag for specific elements. If an element such as a table is contained within a &ltdiv&gt tag, the screen reader won't know how to process the content. Screen readers can also be set to read the &lttitle&gt tag's contents when a page loads so the user knows what page they're on.</p>
+		<p>While screen readers are capable of supporting multiple languages, the screen reader needs to know from the HTML tags what language the content is written in. This is stored within the &lthtml&gt tag. For example, the following tag sets the established language to english:</p>
+		<p><b>&emsp;&lthtml lang="en"&gt</b></p>
+		<p>For scenarios where specific sections are in a different language, the lang attribute can be placed inside of any tag:</p>
+		<p><b>&emsp;&ltp&gt“Hello” in Spanish is &ltspan lang=“es”&gthola&lt/span&gt.&lt/p&gt</b></p>
+		
+		<h2>ARIA Roles</h2>
+		<p>ARIA roles are attributes that are placed inside of tags that aren't semantically rich in order to tell screen readers what their function is. ARIA roles can be placed inside of &ltdiv&gt and &ltspan&gt tags using the role attribute. The primary ARIA roles are form, main, navigation, and search. Here is an example of an ARIA role in HTML:</p>
+		<p><b>&emsp;&ltdiv role="main"&gt<br>&emsp;&lt/div&gt</b></p>
+		<p>Keep in mind that only tags that are not semantically rich should have ARIA roles used, such as in &ltdiv&gt and &ltspan&gt.</p>
+		
+		<h2>Accessible Design Practices</h2>
+		<p>When writing the text content of the webpage, try to make the first sentences and headings of each section be descriptive of the content within the section. This is because when users that use screen readers skim through a webpage, they'll often only read the first sentence or two of each section, or even just the heading to see if the section is relevant to them, so it's important to make the first sentences and headers descriptive.</p>
+		<p>It is also important to make sure that certain elements have alt text descriptions added for screen readers. Elements like icons, images, videos, and embeds should all have alt text that describes the element. This is so users can use their screen readers to get a description of what an image is, what a video shows, etc. Screen readers will automatically read the alt text description of an element. However, if no alt text is provided, the screen reader will read the filename of the image or video instead. In some cases, screen readers will ignore the element completely, depriving the user of necessary information.</p>
+		<p>Punctuation is also important for screen readers, since screen readers will pronounce words and phrases exactly as they are written. Using proper grammar and punctuation will not only make your website more readable, but it'll make your website more accessible to those using screen readers as well.</p>
+		<br>
+	</main>
+<hr>
+<footer style="text-align:center;">
+	<p>Feel like you have a good grasp on screen readers? Try testing your knowledge at the <a href="comprehension.html">Comprehension Check!</a></p>
+</footer>
 	
 </body>
 </html>
