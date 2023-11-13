@@ -79,6 +79,8 @@ A user controls their screen reader with the keyboard. A screen reader comes wit
 In addition to TTS, some screen readers can convert onscreen text into braille. For this function, users connect an external device, called a refreshable braille display, which generates braille characters on a pad as the screen reader scans the text. Here’s what a typical refreshable braille display looks like.
 
 -This is all the keys on a keyboard for a JAWS, NVDA, Narrator, and VoiceOver screen reader. It's not very nice in this format but it shows it off.
+
+
 Task
 JAWS
 NVDA
