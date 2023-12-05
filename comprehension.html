@@ -69,6 +69,15 @@
                 correctExplanation: "Screen Readers are software designed for enabling users that cannot see text to interpret the content another way, such as through auditory reading or braille translations",
                 incorrectExplanation: "A Screen Reader is a piece of software designed to assist blind people in accessing information by reading the content to them."
             },
+
+            {
+                question: "How would you propoerly give an alternative tag to an 'img' element?",
+                options: ["&lt;img src=&quot;example.png&quot;&gt; &lt;alt=&quot;picture of example&quot;&gt;", "&lt;img src=&quot;example.png&quot;, &quot;picture of example&quot;&gt;", "&lt;img src=&quot;example.png&quot; alt=&quot;picture of example&quot;&gt;"],
+                correctAnswer: "<img src=\"example.png\" alt=\"picture of example\">",
+                correctExplanation: "This is the correct method of giving an alternate tag to an 'img' element",
+                incorrectExplanation: "The correct answer is: &lt;img src=&quot;example.png&quot; alt=&quot;picture of example&quot;&gt;"
+            },
+
             {
                 question: "T/F Most creen Readers can only use 1 language?",
                 options: ["True", "False"],
@@ -76,6 +85,16 @@
                 correctExplanation: "Screen Readers are capable of reading multiple languages.",
                 incorrectExplanation: "Screen Readers are typically designed to handle multiple languages, not just one."
             },
+
+            {
+                question: "Which tags do NOT imply what they contain to a screen reader?",
+                options: ["tr & td", "div & span", "img & article", "form & button" ],
+                correctAnswer: "div & span",
+                correctExplanation: "div & span imply what they contain to a screen reader",
+                incorrectExplanation: "The right answer is 'div & span'"
+
+            },
+
             {
                 question: "What is Scripting?",
                 options: ["Writing the transcript of a website to be read by a screen reader", "Type of coding that automates various step-by-step functions or processes", "The way user and companies share customized screen reader setting", "None of the above"],
@@ -83,6 +102,15 @@
                 correctExplanation: "Scripting is used for automating the Screen Reader’s usage to make the user experience more efficient.",
                 incorrectExplanation: "Scripting is a type of coding designed for automating the use of a Screen Reader."
             },
+            
+            {
+                question: "Which is the proper way to implement a heading tag?",
+                options: ["h1.Heading./h1", "&lt;h1&gt;Heading&lt;h1&gt;", "[h1]Heading[/h1]", "&lt;h1&gt;Heading&lt;/h1&gt;"],
+                correctAnswer: "<h1>Heading</h1>",
+                correctExplanation: "This is the proper way to implement a heading tag",
+                incorrectExplanation: "The correct answer is: &lt;h1&gt;Heading&lt;/h1&gt;"
+            },
+
             {
                 question: "T/F Screen readers don’t support script sharing?",
                 options: ["False", "True"],
@@ -190,7 +218,7 @@
                 var userAnswer = selectedOption.value;
                 var currentQuestion = quizQuestions[currentQuestionIndex];
 
-                if (userAnswer === currentQuestion.correctAnswer) {
+                if (userAnswer == currentQuestion.correctAnswer) {
                     document.getElementById("result").innerHTML = `Correct! ${currentQuestion.correctExplanation}`;
                     answers[currentQuestionIndex] = true;
                 } else {
