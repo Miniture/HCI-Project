@@ -42,13 +42,13 @@
 		<p>There are many other reasons as to why it is important to use proper tags. Screen readers are able to jump between tags of the same type quickly to allow for easier navigation. For example, when a screen reader reaches a &lth2&gt heading, it'll allow the user to jump between every &lth2&gt heading on the page.</p>
 		<p>Certain HTML tags activate specific features of screen readers. For example, screen readers will change its controls to allow the user to navigate a table when it detects the &lttable&gt tag. Because of this, it's important to always use the correct tag for specific elements. If an element such as a table is contained within a &ltdiv&gt tag, the screen reader won't know how to process the content. Screen readers can also be set to read the &lttitle&gt tag's contents when a page loads so the user knows what page they're on.</p>
 		<p>While screen readers are capable of supporting multiple languages, the screen reader needs to know from the HTML tags what language the content is written in. This is stored within the &lthtml&gt tag. For example, the following tag sets the established language to english:</p>
-		<p><b>&emsp;&lthtml lang="en"&gt</b></p>
+		<img src="img/lang.png" class="example">
 		<p>For scenarios where specific sections are in a different language, the lang attribute can be placed inside of any tag:</p>
-		<p><b>&emsp;&ltp&gt“Hello” in Spanish is &ltspan lang=“es”&gthola&lt/span&gt.&lt/p&gt</b></p>
+		<img src="img/lang2.png" class="example">
 		
 		<h2>ARIA Roles</h2>
 		<p>ARIA roles are attributes that are placed inside of tags that aren't semantically rich in order to tell screen readers what their function is. ARIA roles can be placed inside of &ltdiv&gt and &ltspan&gt tags using the role attribute. The primary ARIA roles are form, main, navigation, and search. Here is an example of an ARIA role in HTML:</p>
-		<p><b>&emsp;&ltdiv role="main"&gt<br>&emsp;&lt/div&gt</b></p>
+		<img src="img/ariarole.png" class="example">
 		<p>Keep in mind that only tags that are not semantically rich should have ARIA roles used, such as in &ltdiv&gt and &ltspan&gt.</p>
 		
 		<h2>Accessible Design Practices</h2>
